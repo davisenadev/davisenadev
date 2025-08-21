@@ -2,7 +2,7 @@
 
 **`Desenvolvedor FullStack`**
 
-Me chamo Davi de Sena Barbosa Silva, tenho 23 anos e sou de Salvador. Concluí o curso de Análise e Desenvolvimento de Sistemas na UNIFACS. Atualmente trabalho como programador na empresa Grupo New Chase. Sou apaixonada por tecnologia e estou sempre em busca de desenvolvimento proficional através de estudos e novos conhecimentos.
+Me chamo Davi de Sena Barbosa Silva, tenho 23 anos e sou de Salvador. Concluí o curso de Análise e Desenvolvimento de Sistemas na UNIFACS. Atualmente sou Programador Junior na empresa Grupo New Chase. Sou apaixonada por tecnologia e estou sempre em busca de desenvolvimento proficional através de estudos e novos conhecimentos.
 
 <p align="left">          
     </a> 
