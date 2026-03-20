@@ -126,6 +126,8 @@ const translations = {
     'about-skills-title': 'Skills',
     // Projects
     'projects-title': 'Projects',
+    'projects-description-1': 'A simple game where the user tries to guess a randomly generated secret number, receiving hints like higher or lower until they get it right.',
+    'projects-description-2': 'Game Tracking is a web page that lets you track your gaming progress across PS4, Xbox, PC, and Nintendo platforms.',
     'projects-btn': 'View Project',
     // Resume
     'resume-title': 'My Resume',
@@ -157,6 +159,8 @@ const translations = {
     'about-skills-title': 'Habilidades',
     // Projects
     'projects-title': 'Projetos',
+    'projects-description-1': 'Jogo simples onde o usuário tenta adivinhar um número secreto gerado aleatoriamente, recebendo dicas de maior ou menor até acertar.',
+    'projects-description-2': 'Game Tracking é uma página web que permite acompanhar o progresso dos seus jogos nas plataformas PS4, Xbox, PC e Nintendo.',
     'projects-btn': 'Ver Projeto',
     // Resume
     'resume-title': 'Meu Currículo',
@@ -198,6 +202,8 @@ const applyTranslations = (lang) => {
 
   // Projects
   document.querySelector('#projects .section__title').textContent = t['projects-title']
+  document.querySelector('#projects-description-1').innerHTML = t['projects-description-1']
+  document.querySelector('#projects-description-2').innerHTML = t['projects-description-2']
   document.querySelectorAll('.projects__data .button').forEach(btn => btn.textContent = t['projects-btn'])
 
   // Resume
