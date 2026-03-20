@@ -27,16 +27,6 @@ const linkAction = () =>{
 
 navLink.forEach(n => n.addEventListener('click', linkAction))
 
-/*=============== HOME TYPED JS ===============*/
-const typedHome = new Typed('#home-typed', {
-    strings: ['Desenvolvedor Web', 'Análise e Desenvolvimento de Sistemas', 'Programador'],
-    typeSpeed: 80,
-    backSpeed: 40,
-    backDelay: 2000,
-    loop: true,
-    cursorChar: '_',
-})
-
 /*=============== ADD SHADOW HEADER ===============*/
 const shadowHeader = () =>{
     const header = document.getElementById('header')
@@ -52,13 +42,6 @@ const contactForm = document.getElementById('contact-form'),
 const sendEmail = (e) =>{
     e.preventDefault()
 
-    // The code for sending emails is a sample test.
-
-    // Create your account at https://www.emailjs.com/ 
-    // and follow the instructions in the video and images 
-    // to send emails with your account.
-
-    // serviceID - templateID - #form - publicKey
     emailjs.sendForm('service_m6nat0a','template_sktlll2','#contact-form','-T_Zi2w9vDlQ1oULF')
     .then(() =>{
         contactMessage.textContent = 'Message sent successfully ✅'
@@ -121,3 +104,135 @@ sr.reveal(`.about__content, .contact__content`, {origin: 'bottom'})
 sr.reveal(`.about__image, .contact__form`, {delay: 300})
 
 sr.reveal(`.projects__card`, {interval: 100})
+
+/*=============== LANGUAGE TOGGLE ===============*/
+const translations = {
+  en: {
+    // Nav
+    'nav-home': 'Home',
+    'nav-about': 'About',
+    'nav-projects': 'Projects',
+    'nav-resume': 'Resume',
+    'nav-contact': 'Contact',
+    // Home
+    'home-subtitle': "Hi, I'm a",
+    'home-description': 'Junior <strong>FullStack Developer</strong> focused on scalable web applications. I work with <strong>Angular, NestJS and Node.js</strong>, writing clean code, integrating APIs and applying software engineering best practices.',
+    'home-btn-cv': 'Download CV',
+    'home-btn-projects': 'Projects',
+    // About
+    'about-title': 'About Me',
+    'about-description': 'I\'m a <span class="about__highlight">Junior FullStack Developer at Grupo New Chase</span>, working on complete web applications. I use <strong>Angular, NestJS and Node.js</strong> to build scalable solutions with clean code and API integrations. Graduated in <strong>Systems Analysis and Development from UNIFACS</strong>.',
+    'about-btn-contact': 'Contact Me',
+    'about-skills-title': 'Skills',
+    // Projects
+    'projects-title': 'Projects',
+    'projects-btn': 'View Project',
+    // Resume
+    'resume-title': 'My Resume',
+    'resume-exp': 'Experience',
+    'resume-edu': 'Education',
+    // Contact
+    'contact-title': 'Contact Me',
+    'contact-placeholder-name': 'Name',
+    'contact-placeholder-email': 'Email',
+    'contact-placeholder-message': 'Message',
+    'contact-btn': 'Send Message',
+  },
+  pt: {
+    // Nav
+    'nav-home': 'Início',
+    'nav-about': 'Sobre',
+    'nav-projects': 'Projetos',
+    'nav-resume': 'Currículo',
+    'nav-contact': 'Contato',
+    // Home
+    'home-subtitle': 'Olá, eu sou',
+    'home-description': 'Desenvolvedor <strong>FullStack Junior</strong> com foco em aplicações web escaláveis. Trabalho com <strong>Angular, NestJS e Node.js</strong>, escrevendo código limpo, realizando integração de APIs e aplicando boas práticas de engenharia de software.',
+    'home-btn-cv': 'Baixar CV',
+    'home-btn-projects': 'Projetos',
+    // About
+    'about-title': 'Sobre Mim',
+    'about-description': 'Sou <span class="about__highlight">Programador Junior FullStack no Grupo New Chase</span>, atuando no desenvolvimento completo de aplicações web. Trabalho com <strong>Angular, NestJS e Node.js</strong>, criando soluções escaláveis com código limpo, integração de APIs e boas práticas de engenharia de software. Formado em <strong>Análise e Desenvolvimento de Sistemas pela UNIFACS</strong>.',
+    'about-btn-contact': 'Fale Comigo',
+    'about-skills-title': 'Habilidades',
+    // Projects
+    'projects-title': 'Projetos',
+    'projects-btn': 'Ver Projeto',
+    // Resume
+    'resume-title': 'Meu Currículo',
+    'resume-exp': 'Experiência',
+    'resume-edu': 'Educação',
+    // Contact
+    'contact-title': 'Fale Comigo',
+    'contact-placeholder-name': 'Nome',
+    'contact-placeholder-email': 'E-mail',
+    'contact-placeholder-message': 'Mensagem',
+    'contact-btn': 'Enviar Mensagem',
+  }
+}
+
+let currentLang = 'en'
+
+const applyTranslations = (lang) => {
+  const t = translations[lang]
+
+  // Nav links
+  document.querySelector('a[href="#home"].nav__link').textContent = t['nav-home']
+  document.querySelector('a[href="#about"].nav__link').textContent = t['nav-about']
+  document.querySelector('a[href="#projects"].nav__link').textContent = t['nav-projects']
+  document.querySelector('a[href="#resume"].nav__link').textContent = t['nav-resume']
+  document.querySelector('a[href="#contact"].nav__link').textContent = t['nav-contact']
+
+  // Home
+  document.querySelector('.home__subtitle').innerHTML = `${t['home-subtitle']} <span id="home-typed"></span>`
+  document.querySelector('.home__description').innerHTML = t['home-description']
+  const [btnCV, btnProjects] = document.querySelectorAll('.home__buttons .button')
+  btnCV.textContent = t['home-btn-cv']
+  btnProjects.textContent = t['home-btn-projects']
+
+  // About
+  document.querySelector('.about__content .section__title').textContent = t['about-title']
+  document.querySelector('.about__description').innerHTML = t['about-description']
+  document.querySelector('.about__data .button').textContent = t['about-btn-contact']
+  document.querySelector('.about__subtitle span').textContent = t['about-skills-title']
+
+  // Projects
+  document.querySelector('#projects .section__title').textContent = t['projects-title']
+  document.querySelectorAll('.projects__data .button').forEach(btn => btn.textContent = t['projects-btn'])
+
+  // Resume
+  document.querySelector('#resume .section__title').textContent = t['resume-title']
+  document.querySelector('.resume__content:nth-child(1) .resume__subtitle span').textContent = t['resume-exp']
+  document.querySelector('.resume__content:nth-child(2) .resume__subtitle span').textContent = t['resume-edu']
+
+  // Contact
+  document.querySelector('#contact .section__title').textContent = t['contact-title']
+  document.querySelector('input[name="user_name"]').placeholder = t['contact-placeholder-name']
+  document.querySelector('input[name="user_email"]').placeholder = t['contact-placeholder-email']
+  document.querySelector('textarea[name="user_message"]').placeholder = t['contact-placeholder-message']
+  document.querySelector('#contact-form .button').textContent = t['contact-btn']
+
+  // Restart Typed.js with new strings
+  if (window.typedHome) window.typedHome.destroy()
+  window.typedHome = new Typed('#home-typed', {
+    strings: lang === 'en'
+      ? ['Web Developer', 'FullStack Developer', 'Systems Analysis and Development']
+      : ['Desenvolvedor Web', 'Desenvolvedor FullStack', 'Análise e Desenvolvimento de Sistemas'],
+    typeSpeed: 80,
+    backSpeed: 40,
+    backDelay: 2000,
+    loop: true,
+    cursorChar: '_',
+  })
+
+  // Update button label
+  document.getElementById('lang-label').textContent = lang === 'en' ? 'PT' : 'EN'
+}
+
+document.getElementById('lang-toggle').addEventListener('click', () => {
+  currentLang = currentLang === 'en' ? 'pt' : 'en'
+  applyTranslations(currentLang)
+})
+document.addEventListener('DOMContentLoaded', () => {
+    applyTranslations('en')
+})
