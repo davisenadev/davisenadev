@@ -61,12 +61,9 @@ delivering clean, maintainable code and high-performance solutions.
 
 | Project | Description | Link |
 |---|---|---|
-| 🧳 **Travel Website** | Design and development of a travel landing page | [View →](#) |
-| 🏋️ **Gym Website** | Full gym website with modern layout | [View →](#) |
-| ☕ **Coffee Website** | Coffee brand website with elegant design | [View →](#) |
-| 💼 **Business Design** | Corporate design and development | [View →](#) |
-| 🍔 **Food Design** | Food brand website interface | [View →](#) |
-| 🤖 **AI Website & Design** | AI-themed landing page | [View →](#) |
+| 🧳 **Secret Number Game** | Design and development of a travel landing page | [View →](https://jogo-do-numero-secreto-ten-liard.vercel.app/) |
+| 🏋️ **Game Tracking Website** | Full gym website with modern layout | [View →](https://game-tracking-three.vercel.app/login) |
+
 
 ---
 
