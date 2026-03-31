@@ -201,6 +201,7 @@ img {
 .hero {
     padding-top: calc(var(--header-height) + 2rem);
     padding-bottom: 1.5rem;
+    margin-top: 40px;
 }
 
 .hero__container {
@@ -291,7 +292,7 @@ img {
     box-shadow:
         0 0 60px hsla(var(--hue), 80%, 48%, 0.1),
         0 8px 32px hsla(0, 0%, 0%, 0.6);
-    max-height: 420px;
+    max-height: 520px;
 }
 
 .showcase__main img {
