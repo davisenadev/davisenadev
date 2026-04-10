@@ -29,6 +29,8 @@
 
                   <li><a href="#projects" class="nav__link">Projects</a></li>
 
+                  <li><a href="#certificates" class="nav__link">Certificates</a></li>
+
                   <li><a href="#resume" class="nav__link">Resume</a></li>
 
                   <li>
@@ -208,6 +210,116 @@
                   </div>
                </article> -->
             </div>
+         </section>
+
+         <!--==================== CERTIFICATES ====================-->
+         <section class="certificates section" id="certificates">
+         <h2 class="section__title">Certificates</h2>
+         
+         <div class="certificates__container container">
+            <div class="certificates__grid" id="cert-grid">
+         
+               <article class="cert__card" data-index="0">
+               <div class="cert__thumb">
+                  <img src="assets/img/certificados/CertificadoADSUNIFACS_page-0001.jpg" alt="Qualificação Profissional em Qualidade de Software">
+                  <div class="cert__overlay"><i class="ri-eye-line"></i></div>
+               </div>
+               <div class="cert__info">
+                  <p class="cert__title">Qualidade de Software</p>
+                  <p class="cert__issuer">UNIFACS · 2024</p>
+               </div>
+               </article>
+         
+               <article class="cert__card" data-index="1">
+               <div class="cert__thumb">
+                  <img src="assets/img/certificados/CertificadoLogicaProgramacaoUnifacs_page-0001.jpg" alt="Algoritmos, Lógica e POO">
+                  <div class="cert__overlay"><i class="ri-eye-line"></i></div>
+               </div>
+               <div class="cert__info">
+                  <p class="cert__title">Algoritmos, Lógica e POO</p>
+                  <p class="cert__issuer">UNIFACS · 2024</p>
+               </div>
+               </article>
+         
+               <article class="cert__card" data-index="2">
+               <div class="cert__thumb">
+                  <img src="assets/img/certificados/DAVI DE SENA - Lógica de programação_funções e listas - Alura_page-0001.jpg" alt="Lógica de Programação: Funções e Listas">
+                  <div class="cert__overlay"><i class="ri-eye-line"></i></div>
+               </div>
+               <div class="cert__info">
+                  <p class="cert__title">Lógica de Programação: Funções e Listas</p>
+                  <p class="cert__issuer">Alura · 2025</p>
+               </div>
+               </article>
+         
+               <article class="cert__card" data-index="3">
+               <div class="cert__thumb">
+                  <img src="assets/img/certificados/DAVI DE SENA- Curso Typescript_API com tipagem segura - Alura_page-0001.jpg" alt="TypeScript: API com Tipagem Segura">
+                  <div class="cert__overlay"><i class="ri-eye-line"></i></div>
+               </div>
+               <div class="cert__info">
+                  <p class="cert__title">TypeScript: API com Tipagem Segura</p>
+                  <p class="cert__issuer">Alura · 2025</p>
+               </div>
+               </article>
+         
+               <article class="cert__card" data-index="4">
+               <div class="cert__thumb">
+                  <img src="assets/img/certificados/DAVI DE SENA - Curso Carreira Node.js_ boas-vindas e primeiros passos - Alura_page-0001.jpg" alt="Carreira Node.js: Boas-vindas e Primeiros Passos">
+                  <div class="cert__overlay"><i class="ri-eye-line"></i></div>
+               </div>
+               <div class="cert__info">
+                  <p class="cert__title">Carreira Node.js: Primeiros Passos</p>
+                  <p class="cert__issuer">Alura · 2025</p>
+               </div>
+               </article>
+         
+            </div>
+         </div>
+         
+         <!-- ══════════ MODAL ══════════ -->
+         <div class="cert__modal" id="cert-modal" role="dialog" aria-modal="true">
+            <div class="cert__modal-box">
+         
+               <!-- Fechar -->
+               <button class="cert__modal-close" id="cert-modal-close" aria-label="Fechar">
+               <i class="ri-close-large-line"></i>
+               </button>
+         
+               <!-- Imagem grande -->
+               <div class="cert__modal-img-wrap">
+               <img src="" alt="" id="cert-modal-img" class="cert__modal-img">
+               </div>
+         
+               <!-- Info + ações -->
+               <div class="cert__modal-body">
+               <div class="cert__modal-info">
+                  <span class="cert__modal-badge" id="cert-modal-issuer"></span>
+                  <h3 class="cert__modal-title" id="cert-modal-title"></h3>
+                  <p class="cert__modal-desc" id="cert-modal-desc"></p>
+               </div>
+         
+               <div class="cert__modal-actions">
+                  <a href="#" id="cert-modal-download" download class="button">
+                     <i class="ri-download-2-line"></i> Download
+                  </a>
+               </div>
+         
+               <!-- Navegação -->
+               <div class="cert__modal-nav">
+                  <button class="cert__modal-prev" id="cert-modal-prev" aria-label="Anterior">
+                     <i class="ri-arrow-left-s-line"></i>
+                  </button>
+                  <span class="cert__modal-counter" id="cert-modal-counter"></span>
+                  <button class="cert__modal-next" id="cert-modal-next" aria-label="Próximo">
+                     <i class="ri-arrow-right-s-line"></i>
+                  </button>
+               </div>
+               </div>
+         
+            </div>
+         </div>
+         
          </section>
 
          <!--==================== RESUME ====================-->

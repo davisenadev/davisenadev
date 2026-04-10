@@ -94,11 +94,16 @@ delivering clean, maintainable code and high-performance solutions.
 ## 📊 GitHub Stats
 
 <div align="center">
-
-![Davi's GitHub Stats](https://github-readme-stats.vercel.app/api?username=davisenadev&show_icons=true&theme=radical&hide_border=true&title_color=00BCD4&icon_color=00BCD4&text_color=ffffff&bg_color=0d1117)
-
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=davisenadev&layout=compact&theme=radical&hide_border=true&title_color=00BCD4&text_color=ffffff&bg_color=0d1117)
-
+   <img
+   src="https://github-readme-stats.vercel.app/api?username=davisenadev&show_icons=true&theme=tokyonight&hide_border=true&count_private=true"
+   alt="Davi's GitHub Stats"
+   height="165"
+   />
+   <img
+   src="https://github-readme-stats.vercel.app/api/top-langs/?username=davisenadev&layout=compact&theme=tokyonight&hide_border=true&langs_count=8"
+   alt="Top Languages"
+   height="165"
+   />
 </div>
 
 ---
